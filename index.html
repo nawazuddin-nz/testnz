@@ -6,7 +6,7 @@
   <title>hts</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nawazuddin-nz/testnz/main/favicon-32x32.png">
 </head>
@@ -15,40 +15,6 @@
 <body>
 
   <style>
- :root {
-  /* --color-bg: #b1c5f4;
-
-  --color-surface: rgba(28, 30, 38, 0.7);  
-  --color-text: #EDEEF1;         
-  --color-muted: #9CA3AF;         
-
-  --color-accent-1: #6366F1;      
-  --color-accent-2: #7C3AED;    
-  --color-accent-3: #A855F7;      
-
---color-startup: rgba(139, 92, 246, 0.15); 
---color-skill: rgba(34, 197, 94, 0.15);     */
-
- --c-cd: #151C31; 
- --transition: all 0.3s ease-in-out;
- --color-accent-1: #00D1FF;
- --glass-border: 1px solid rgba(255, 255, 255, 0.1);
- --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
- /* --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  
-  
-
-
-  --gradient-1: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-3));
-  --gradient-2: linear-gradient(135deg, var(--color-accent-2), var(--color-accent-3)); */
-  
-  --border-radius: 12px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 40px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -57,20 +23,20 @@
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: #ffffff;
+  color: #000000;
   line-height: 1.5;
   min-height: 100vh;
 }
 
 a {
-  color: var(--color-text);
+  color: #000000;
   text-decoration: none;
-  transition: var(--transition);
+  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-  color: var(--color-accent-3);
+  color: #00D1FF;
 }
 
 button {
@@ -78,24 +44,21 @@ button {
   border: none;
   outline: none;
   font-weight: 500;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-sm) var(--spacing-md);
-  transition: var(--transition);
+  border-radius: 12px;
+  padding: 8px 16px;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
   transform: translateY(-2px);
 }
 
-.container {
+.conttr {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 16px;
 }
-
-
-
 
 .btn {
   padding: 1rem 2rem;
@@ -104,7 +67,7 @@ button:hover {
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  transition: var(--transition);
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -114,7 +77,7 @@ button:hover {
 }
 
 .btn.primary {
-  background: var(--gradient-1);
+  background: linear-gradient(135deg, #00D1FF, #00D1FF);
   color: white;
 }
 
@@ -127,7 +90,7 @@ button:hover {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .btn::after {
@@ -139,25 +102,17 @@ button:hover {
   bottom: 0;
   background: linear-gradient(rgba(255,255,255,0.2), transparent);
   opacity: 0;
-  transition: var(--transition);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover::after {
   opacity: 1;
 }
 
-.btn-startup {
-  background: var(--color-startup);
+.btn-startup, .btn-skill {
+  background: #00D1FF;
   color: white;
-  border: var(--glass-border);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.btn-skill {
-  background: var(--color-skill);
-  color: white;
-  border: var(--glass-border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -167,7 +122,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: 16px;
   flex-wrap: wrap;
 }
 
@@ -186,13 +141,11 @@ button:hover {
   color: #ffffff; 
   font-size: 1rem;
   backdrop-filter: blur(8px);
-
 }
-
 
 .srch-bar input:focus {
   outline: none;
-  border-color: var(--color-accent-1);
+  border-color: #00D1FF;
 }
 
 .srch-bar::after {
@@ -200,63 +153,57 @@ button:hover {
   position: absolute;
   top: 28%;
   font-size: 1.2rem;
-  left:2%;
+  left: 2%;
 }
 
 .filter-buttons {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: 8px;
 }
 
 .filter-buttons button {
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--border-radius);
-  background: var(--glass-bg);
-  color: var(--color-text);
-  border: var(--glass-border);
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  color: #ffffffab;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  transition: var(--transition);
+  transition: all 0.3s ease-in-out;
 }
 
-.filter-buttons button.active.startup {
-  background: var(--color-startup);
-}
-
+.filter-buttons button.active.startup, 
 .filter-buttons button.active.skill {
-  background: var(--color-skill);
+  background: #00D1FF;
 }
 
 .cont-sec {
-  padding: var(--spacing-lg) 0;
+  padding: 24px 0;
 }
 
 .sec-titl {
   font-size: 2rem;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 24px;
   text-align: center;
 }
 
 .cards-con {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--spacing-lg);
+  gap: 24px;
 }
 
 .card {
-  background: var(--c-cd);
-  border-radius: var(--border-radius);
+  background: #151C31;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-  border: var(--glass-border);
-  /* backdrop-filter: blur(8px); */
-  /* -webkit-backdrop-filter: blur(8px); */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); */
   border-color: #00D1FF;
 }
 
@@ -267,17 +214,17 @@ button:hover {
 }
 
 .card-content {
-  padding: var(--spacing-md);
+  padding: 16px;
 }
 
 .card-title {
   font-size: 1.25rem;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 8px;
 }
 
 .card-description {
-  color: var(--color-muted);
-  margin-bottom: var(--spacing-md);
+  color: #94a3b8;
+  margin-bottom: 16px;
   height: 4.5em;
   overflow: hidden;
   display: -webkit-box;
@@ -288,33 +235,36 @@ button:hover {
 .card-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
-.tag-startup,.tag-skill  {
+.tag-startup, .tag-skill {
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
-  color: #E2E8F0; /* Light text */
+  color: #E2E8F0;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-  border: 1px solid rgba(255, 255, 255, 0.12); /* Soft glass border */
+  border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
-#flex{
+#flex {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding-top: 20px;
   margin: 0;
 }
+
 .card-links {
   display: flex;
-  gap: var(--spacing-sm);
-  /* margin-bottom: var(--spacing-md); */
+  gap: 8px;
+}
+.card-links a{
+  color: white !important;
 }
 
 .card-link {
@@ -324,16 +274,16 @@ button:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: var(--glass-bg);
-  border: var(--glass-border);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  transition: var(--transition);
+  transition: all 0.3s ease-in-out;
   font-size: 1.2rem;
 }
 
 .card-link:hover {
-color:white;
+  color: white;
   transform: translateY(-2px);
   border-color: transparent;
 }
@@ -341,15 +291,15 @@ color:white;
 .card-actions {
   display: flex;
   justify-content: space-between;
-  /* margin-top: var(--spacing-md); */
 }
 
 .cta-sec {
-  padding: var(--spacing-xl);
+  padding: 40px;
   text-align: center;
-  background: var(--color-surface);
-  margin: var(--spacing-xl) 0;
-  border-radius: var(--border-radius);
+  background: #ffffff;
+  margin: 40px 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.059), rgba(111, 233, 255, 0.103));
   border: 1px solid rgba(255, 255, 255, 0.655);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -357,8 +307,8 @@ color:white;
 
 .cta-sec h2 {
   font-size: 2.5rem;
-  margin-bottom: var(--spacing-md);
-  background: var(--gradient-1);
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #00D1FF, #00D1FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -366,23 +316,23 @@ color:white;
 
 .cta-sec p {
   max-width: 600px;
-  margin: 0 auto var(--spacing-lg);
-  color: var(--color-muted);
+  margin: 0 auto 24px;
+  color: #94a3b8;
 }
 
-.cta-buttons {
+.cta-bts {
   display: flex;
-  gap: var(--spacing-md);
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .footer {
-  padding: var(--spacing-lg) 0;
+  padding: 24px 0;
   text-align: center;
   background: rgba(28, 30, 40, 0.815);
-  margin-top: var(--spacing-xl);
-  border-top: var(--glass-border);
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -390,19 +340,19 @@ color:white;
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 16px;
 }
 
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
+  gap: 24px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
 }
 
 .footer-copyright {
-  color: var(--color-muted);
+  color: #94a3b8;
   font-size: 0.9rem;
 }
 
@@ -423,16 +373,17 @@ color:white;
     grid-template-columns: 1fr;
   }
   
-  .cta-buttons {
+  .cta-bts {
     flex-direction: column;
   }
   
   .footer-links {
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: 8px;
   }
 }
 
+  
 
 
 
@@ -555,7 +506,7 @@ color:white;
         overflow: hidden;
     }
     
-    .btn.primary {
+    .btn.prim {
         background: linear-gradient(135deg, #00D1FF, #7000FF);
         color: white;
     }
@@ -621,7 +572,7 @@ color:white;
       
       </div>
       <div class="hir0-buttons">
-        <a href="startups.html">  <button class="btn primary">
+        <a href="startups.html">  <button class="btn prim">
           Local Enterprises
           </button></a>
          <a href="skills.html"> <button onclick="scrollToSection('submission-form')" class="btn secondary">
@@ -633,7 +584,7 @@ color:white;
 
 
   <!-- Search & Filter Section -->
-  <section class="container srch-con">
+  <section class="conttr srch-con">
     <div class="srch-bar">
       <input type="text" id="search-input" placeholder="Search by name or tag...">
     </div>
@@ -646,11 +597,11 @@ color:white;
 
   <!-- Content Section -->
   <section class="cont-sec">
-    <div class="container">
+    <div class="conttr">
       <!-- Startups -->
       <div id="startups-section" style="margin-bottom: 50px;">
         <h2 class="sec-titl">Local Enterprises</h2>
-        <div class="cards-con" id="startups-container">
+        <div class="cards-con" id="startups-conttr">
           <!-- Cards will be dynamically generated here -->
         </div>
         <hr style="margin-top: 30px;">
@@ -659,7 +610,7 @@ color:white;
       <!-- Skills -->
       <div id="skills-section">
         <h2 class="sec-titl">Student Enterprises</h2>
-        <div class="cards-con" id="skills-container">
+        <div class="cards-con" id="skills-conttr">
           <!-- Cards will be dynamically generated here -->
         </div>
       </div>
@@ -667,31 +618,31 @@ color:white;
   </section>
 
   <!-- CTA Section -->
-  <section class="container">
+  <section class="conttr">
     <div class="cta-sec">
       <h2>Have Something to Share?</h2>
       <p>Whether you're working on an innovative startup or have skills to showcase, we want to hear from you!</p>
-      <div class="cta-buttons">
-        <a href="#" class="btn btn primary"><i class="fas fa-rocket"></i> Submit Your Startup</a>
-        <a href="#" class="btn btn primary"><i class="fas fa-brain"></i> Share Your Skills</a>
+      <div class="cta-bts">
+        <a href="#" class="btn btn prim"><i class="fas fa-rocket"></i> Submit Your Startup</a>
+        <a href="#" class="btn btn prim"><i class="fas fa-brain"></i> Share Your Skills</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="conttr">
       <div class="footer-content">
         <div class="footer-links">
-          <a href=""><i class="fas fa-home"></i> Home</a>
-          <a href=""><i class="fas fa-rocket"></i> Startups</a>
-          <a href=""><i class="fas fa-brain"></i> Skills</a>
+          <a href="" style="color: rgba(224, 224, 224, 0.811);"><i class="fas fa-home"></i> Home</a>
+          <a href="" style="color: rgba(224, 224, 224, 0.811);"><i class="fas fa-rocket"></i> Startups</a>
+          <a href="" style="color: rgba(224, 224, 224, 0.811);"><i class="fas fa-brain"></i> Skills</a>
           
         </div>
         <h3 style="margin-bottom: -17px; padding: 0;">Site Admins:</h3> 
         <div style="display: flex; align-items: center; justify-content: center; gap:30px;">
-         <a href=""> <p> <i class="fa-brands fa-whatsapp"></i> Nawaz LS</p></a>
-         <a href="">  <p> <i class="fa-brands fa-whatsapp"></i> Harsha Y</p></a>
+         <a href=""> <p style="color: white;"> <i class="fa-brands fa-whatsapp"></i> Nawaz LS</p></a>
+         <a href="">  <p style="color: white;"> <i class="fa-brands fa-whatsapp"></i> Harsha Y</p></a>
         </div>
         <div class="footer-copyright">
           &copy; 2025 Student Showcase. All rights reserved.
@@ -701,147 +652,133 @@ color:white;
   </footer>
 
   <script>
-   
+    document.addEventListener('DOMContentLoaded', fetchData);
+  
     async function fetchData() {
       try {
         const response = await fetch('maindata.json');
         const data = await response.json();
-        
-        // starup card rend kar re
-        const startupsContainer = document.getElementById('startups-container');
+  
+        // Render startup cards
+        const startupsContainer = document.getElementById('startups-conttr');
         data.startups.forEach(startup => {
           startupsContainer.innerHTML += createCard(startup, 'startup');
         });
-        
-        // skills card rend kar re
-        const skillsContainer = document.getElementById('skills-container');
+  
+        // Render skill cards
+        const skillsContainer = document.getElementById('skills-conttr');
         data.skills.forEach(skill => {
           skillsContainer.innerHTML += createCard(skill, 'skill');
         });
-        
-        
-        setupSearchAndFilter();
-        
+  
+        initializeSearchAndFilter();
+  
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Failed to fetch data:', error);
       }
     }
-    
-    // Creating crad broo
+  
+    // Function to create a card
     function createCard(item, type) {
-      const tagsHtml = item.tags.map(tag => 
+      const tagsHTML = item.tags.map(tag => 
         `<span class="tag tag-${type}">${tag}</span>`
       ).join('');
-      
-      const linksHtml = `
+  
+      const linksHTML = `
         ${item.links.whatsapp ? `<a href="${item.links.whatsapp}" class="card-link" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>` : ''}
         ${item.links.instagram ? `<a href="${item.links.instagram}" class="card-link" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>` : ''}
         ${item.links.amazon ? `<a href="${item.links.amazon}" class="card-link" title="Amazon" target="_blank"><i class="fab fa-amazon"></i></a>` : ''}
         ${item.links.youtube ? `<a href="${item.links.youtube}" class="card-link" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>` : ''}
       `;
-   
+  
       return `
-  <div class="card"
-       data-tags="${item.tags.join(',').toLowerCase()}"
-       data-name="${item.name.toLowerCase()}"
-       data-type="${type}">
-    <div class="card-image-container">
-      <img src="${item.image}" alt="${item.name}" class="card-image">
-      <div class="card-image-overlay"></div>
-    </div>
-    <div class="card-content">
-      <h3 class="card-title">${item.name}</h3>
-      <p class="card-description">${item.description}</p>
-      <div class="card-tags">${tagsHtml}</div>
-      <div id="flex">
-        <div class="card-links">${linksHtml}</div>
-        <div class="card-actions">
-          <a href="${item.page}" class="btn primary">
-            <i class="fas fa-arrow-right"></i> More
-          </a>
+        <div class="card"
+             data-tags="${item.tags.join(',').toLowerCase()}"
+             data-name="${item.name.toLowerCase()}"
+             data-type="${type}">
+          <div class="card-image-conttr">
+            <img src="${item.image}" alt="${item.name}" class="card-image">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">${item.name}</h3>
+            <p class="card-description">${item.description}</p>
+            <div class="card-tags">${tagsHTML}</div>
+            <div id="flex">
+              <div class="card-links">${linksHTML}</div>
+              <div class="card-actions">
+                <a href="${item.page}" class="btn prim">
+                  <i class="fas fa-arrow-right"></i> More
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-`;
-
-
+      `;
     }
-    
-    // Searchinggg
-    function setupSearchAndFilter() {
+  
+    // search
+    function initializeSearchAndFilter() {
       const searchInput = document.getElementById('search-input');
       const showAllBtn = document.getElementById('show-all');
       const showStartupsBtn = document.getElementById('show-startups');
       const showSkillsBtn = document.getElementById('show-skills');
-      
+  
       const startupsSection = document.getElementById('startups-section');
       const skillsSection = document.getElementById('skills-section');
-      
+  
       const allCards = document.querySelectorAll('.card');
-      
-      // Searching ing
+  
+      // serch inp
       searchInput.addEventListener('input', filterCards);
-      
-      // Filterpani
+  
+      // filtr
       showAllBtn.addEventListener('click', () => {
-        showAllBtn.classList.add('active');
-        showStartupsBtn.classList.remove('active');
-        showSkillsBtn.classList.remove('active');
-        
+        setActiveButton(showAllBtn);
         startupsSection.style.display = 'block';
         skillsSection.style.display = 'block';
-        
         filterCards();
       });
-      
+  
       showStartupsBtn.addEventListener('click', () => {
-        showAllBtn.classList.remove('active');
-        showStartupsBtn.classList.add('active');
-        showSkillsBtn.classList.remove('active');
-        
+        setActiveButton(showStartupsBtn);
         startupsSection.style.display = 'block';
         skillsSection.style.display = 'none';
-        
         filterCards();
       });
-      
+  
       showSkillsBtn.addEventListener('click', () => {
-        showAllBtn.classList.remove('active');
-        showStartupsBtn.classList.remove('active');
-        showSkillsBtn.classList.add('active');
-        
+        setActiveButton(showSkillsBtn);
         startupsSection.style.display = 'none';
         skillsSection.style.display = 'block';
-        
         filterCards();
       });
-      
+  
+      function setActiveButton(activeBtn) {
+        [showAllBtn, showStartupsBtn, showSkillsBtn].forEach(btn => btn.classList.remove('active'));
+        activeBtn.classList.add('active');
+      }
+  
       function filterCards() {
         const searchTerm = searchInput.value.toLowerCase();
-        
+  
         allCards.forEach(card => {
           const name = card.dataset.name;
           const tags = card.dataset.tags;
           const type = card.dataset.type;
-          
+  
           const showStartups = showAllBtn.classList.contains('active') || showStartupsBtn.classList.contains('active');
           const showSkills = showAllBtn.classList.contains('active') || showSkillsBtn.classList.contains('active');
-          
+  
           const matchesType = (type === 'startup' && showStartups) || (type === 'skill' && showSkills);
           const matchesSearch = name.includes(searchTerm) || tags.includes(searchTerm) || searchTerm === '';
-          
-          if (matchesType && matchesSearch) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
+  
+          card.style.display = (matchesType && matchesSearch) ? 'block' : 'none';
         });
       }
     }
-    
-    
-    document.addEventListener('DOMContentLoaded', fetchData);
   </script>
+  
+  
 </body>
 </html>
