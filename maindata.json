@@ -1,0 +1,86 @@
+{
+  "startups": [
+    {
+      "id": "startup-1",
+      "name": "Flezen Glow",
+      "description": "Flezen Glow offers organic, eco-friendly skincare products to nourish and enhance your skin’s natural radiance.",
+      "tags": ["Beauty", "Skincare", "Health"],
+      "image": "https://raw.githubusercontent.com/nawazuddin-nz/testnz/main/download.jpg",
+      "links": {
+        "whatsapp": "https://wa.me/1234567890",
+        "instagram": "https://instagram.com/ecolearn",
+        "amazon": "",
+        "youtube": "https://youtube.com/ecolearn"
+      },
+      "page": "soap.html"
+    },
+    {
+      "id": "startup-2",
+      "name": "QuickHealth",
+      "description": "On-demand telemedicine service connecting students with healthcare professionals.",
+      "tags": ["HealthTech", "Service", "Mobile"],
+      "image": "https://raw.githubusercontent.com/nawazuddin-nz/testnz/main/download.jpg",
+      "links": {
+        "whatsapp": "https://wa.me/1234567890",
+        "instagram": "https://instagram.com/quickhealth",
+        "amazon": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "startup-3",
+      "name": "Color Nest",
+      "description": "'Bringing colors to life - One brushstroke at a time', I specialize with painting services for small spaces and homes.",
+      "tags": ["Bellary", "Art", ""],
+      "image": "https://raw.githubusercontent.com/nawazuddin-nz/testnz/main/download.jpg",
+      "links": {
+        "whatsapp": "",
+        "instagram": "https://instagram.com/studybuddy",
+        "amazon": "",
+        "youtube": "https://youtube.com/studybuddy"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-1",
+      "name": "Kalai Loop!",
+      "description": "we craft beautiful handmade silk thread bangles that blend treditions with atouch of alegance.",
+      "tags": ["student", "ku", "silk", "bangles"],
+      "image": "https://raw.githubusercontent.com/nawazuddin-nz/testnz/main/download.jpg",
+      "links": {
+        "whatsapp": "https://wa.link/9xuyy0",
+        "instagram": "",
+        "amazon": "",
+        "youtube": "https://youtube.com/codingchannel"
+      }
+    },
+    {
+      "id": "skill-2",
+      "name": "Bloom Decor",
+      "description": "We bring your celebration to life with customized decorations with a boom of Affordability, reliable and done with Love.",
+      "tags": ["student", "smd", "Decor", "custom"],
+      "image": "https://raw.githubusercontent.com/nawazuddin-nz/testnz/main/download.jpg",
+      "links": {
+        "whatsapp": "",
+        "instagram": "https://instagram.com/uxdesigner",
+        "amazon": "",
+        "youtube": ""
+      },
+       "page": "soap.html"
+    },
+    {
+      "id": "skill-3",
+      "name": "Nritya kala",
+      "description": "where tradition meets passion. Am a dedicated kathak teacher to spread the beauty of Indian classic form.",
+      "tags": ["student", "rymec", "dance", "tutor"],
+      "image": "https://raw.githubusercontent.com/nawazuddin-nz/testnz/main/download.jpg",
+      "links": {
+        "whatsapp": "https://wa.me/1234567890",
+        "instagram": "https://instagram.com/datascientist",
+        "amazon": "",
+        "youtube": "https://youtube.com/datasciencechannel"
+      }
+    }
+  ]
+}
