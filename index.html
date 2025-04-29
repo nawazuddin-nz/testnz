@@ -3,218 +3,414 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Showcase - Startups & Skills</title>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+  <title>hts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nawazuddin-nz/testnz/main/favicon-32x32.png">
+</head>
+
 </head>
 <body>
 
-<style>
-  :root {
-    ---clr-bkg: #0A0F1C;  
-    --color-header: #FFFFFF;
-    --color-accent-1: #00D1FF;
-    --color-accent-2: #FF3DDB;
-    --color-accent-3: #7000FF;
-    --color-card: #151C31;
-    --color-text: #E2E8F0;
-    --color-text-light: #94A3B8;
-    --color-startup: rgba(138, 92, 246, 0.358); 
-    --color-skill: rgba(34, 197, 94, 0.32);     
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --gradient-1: linear-gradient(135deg,#00D1FF ,#7000FF );
-    --gradient-2: linear-gradient(135deg,#FF3DDB , #7000FF);
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #0A0F1C;
-    color: #E2E8F0;
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
-}
-
-.hir0 {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    padding: 2rem;
-}
-
-.hir0-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 20%, rgba(0, 209, 255, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(112, 0, 255, 0.15) 0%, transparent 40%) !important;
-    z-index: 1;
-    border-bottom: 5px dotted rgba(122, 122, 255, 0.445);
-}
-
-.hir0-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 1200px;
-}
-
-.three-txt {
-    background: linear-gradient(135deg, #00D1FF, #7000FF);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 4.5rem;
-    font-weight: 700;
-    display: block;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.hir0 .subheading {
-    font-size: 1.8rem;
-    margin-bottom: 3rem;
-    color: #94A3B8;
-}
-
-.hir0-sts {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin-bottom: 3rem;
-}
-
-.st {
-    text-align: center;
-}
-
-.st-number {
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #00D1FF;
-    display: block;
-}
-
-.st-label {
-    font-size: 1.1rem;
-    color: #94A3B8;
-}
-
-.hir0-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-}
-
-.btn {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn.primary {
-    background: linear-gradient(135deg, #00D1FF, #7000FF);
-    color: white;
-}
-
-.btn.secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-}
-
-.btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(255,255,255,0.2), transparent);
-    opacity: 0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn:hover::after {
-    opacity: 1;
-}
-
-</style>
+  <style>
+ 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #0A0F1C;
+        color: #E2E8F0;
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        color: #FFFFFF;
+    }
+    
+    .hir0 {
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 2rem;
+    }
+    
+    .hir0-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 20%, rgba(0, 209, 255, 0.15) 0%, transparent 40%),
+            radial-gradient(circle at 80% 80%, rgba(112, 0, 255, 0.15) 0%, transparent 40%) !important;
+        z-index: 1;
+        border-bottom: 5px dotted rgba(122, 122, 255, 0.445);
+    }
+    
+    .hir0-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 1200px;
+    }
+    
+    .three-txt {
+        background: linear-gradient(135deg, #00D1FF, #7000FF);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 4.5rem;
+        font-weight: 700;
+        display: block;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hir0 .subheading {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+        color: #94A3B8;
+    }
+    
+    .hir0-sts {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .st {
+        text-align: center;
+    }
+    
+    .st-number {
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #00D1FF;
+        display: block;
+    }
+    
+    .st-label {
+        font-size: 1.1rem;
+        color: #94A3B8;
+    }
+    
+    .hir0-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    
+    .btn {
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .btn.primary {
+        background: linear-gradient(135deg, #00D1FF, #7000FF);
+        color: white;
+    }
+    
+    .btn.secondary {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(255,255,255,0.2), transparent);
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .btn:hover::after {
+        opacity: 1;
+    }
+    
+    </style>
 
 
 
-
-  <header class="hir0">
-    <div class="hir0-bg"></div>
-    <div class="hir0-content">
-        <h1>  
-            <span class="three-txt">Showcase.</span>
-            <span class="three-txt">Connect.</span>
-            <span class="three-txt">Grow.</span>
-        </h1>
-        <p class="subheading">Connecting Local Dreams to Wider Markets.</p>
-        <div class="hir0-sts">
-          <div class="st">
-             
-            <span class="st-number">Homegrown Businesses </span>
-            <span class="st-label"></span>
-        </div>
+<header class="hir0">
+  <div class="hir0-bg"></div>
+  <div class="hir0-content">
+      <h1>  
+          <span class="three-txt">Showcase.</span>
+          <span class="three-txt">Connect.</span>
+          <span class="three-txt">Grow.</span>
+      </h1>
+      <p class="subheading">Connecting Local Dreams to Wider Markets.</p>
+      <div class="hir0-sts">
         <div class="st">
-            <span class="st-number">Artisan Creations</span>
-            <span class="st-label"></span>
-        </div>
-        <div class="st">
-            <span class="st-number">Expanded Horizons</span>
-            <span class="st-label"></span>
-        </div>
-        
-        </div>
-        <div class="hir0-buttons">
-          <a href="startups.html">  <button class="btn primary">
-            Local Enterprises
-            </button></a>
-           <a href="skills.html"> <button onclick="scrollToSection('submission-form')" class="btn secondary">
-            Student Enterprises
-            </button></a>
-        </div>
-    </div>
+           
+          <span class="st-number">Homegrown Businesses </span>
+          <span class="st-label"></span>
+      </div>
+      <div class="st">
+          <span class="st-number">Artisan Creations</span>
+          <span class="st-label"></span>
+      </div>
+      <div class="st">
+          <span class="st-number">Expanded Horizons</span>
+          <span class="st-label"></span>
+      </div>
+      
+      </div>
+      <div class="hir0-buttons">
+        <a href="startups.html">  <button class="btn primary">
+          Local Enterprises
+          </button></a>
+         <a href="skills.html"> <button onclick="scrollToSection('submission-form')" class="btn secondary">
+          Student Enterprises
+          </button></a>
+      </div>
+  </div>
 </header>
 
- 
- 
+
+  <!-- Search & Filter Section -->
+  <section class="container srch-con">
+    <div class="srch-bar">
+      <input type="text" id="search-input" placeholder="Search by name or tag...">
+    </div>
+    <div class="filter-buttons">
+      <button id="show-all" class="active">All</button>
+      <button id="show-startups" class="startup"><i class="fas fa-rocket"></i> Local-Ent</button>
+      <button id="show-skills" class="skill"><i class="fas fa-brain"></i> Stu-Ent</button>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="cont-sec">
+    <div class="container">
+      <!-- Startups -->
+      <div id="startups-section" style="margin-bottom: 50px;">
+        <h2 class="sec-titl">Local Enterprises</h2>
+        <div class="cards-con" id="startups-container">
+          <!-- Cards will be dynamically generated here -->
+        </div>
+        <hr style="margin-top: 30px;">
+      </div>
+
+      <!-- Skills -->
+      <div id="skills-section">
+        <h2 class="sec-titl">Student Enterprises</h2>
+        <div class="cards-con" id="skills-container">
+          <!-- Cards will be dynamically generated here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="container">
+    <div class="cta-sec">
+      <h2>Have Something to Share?</h2>
+      <p>Whether you're working on an innovative startup or have skills to showcase, we want to hear from you!</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn primary"><i class="fas fa-rocket"></i> Submit Your Startup</a>
+        <a href="#" class="btn btn primary"><i class="fas fa-brain"></i> Share Your Skills</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href=""><i class="fas fa-home"></i> Home</a>
+          <a href=""><i class="fas fa-rocket"></i> Startups</a>
+          <a href=""><i class="fas fa-brain"></i> Skills</a>
+          
+        </div>
+        <h3 style="margin-bottom: -17px; padding: 0;">Site Admins:</h3> 
+        <div style="display: flex; align-items: center; justify-content: center; gap:30px;">
+         <a href=""> <p> <i class="fa-brands fa-whatsapp"></i> Nawaz LS</p></a>
+         <a href="">  <p> <i class="fa-brands fa-whatsapp"></i> Harsha Y</p></a>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2025 Student Showcase. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+   
+    async function fetchData() {
+      try {
+        const response = await fetch('maindata.json');
+        const data = await response.json();
+        
+        // starup card rend kar re
+        const startupsContainer = document.getElementById('startups-container');
+        data.startups.forEach(startup => {
+          startupsContainer.innerHTML += createCard(startup, 'startup');
+        });
+        
+        // skills card rend kar re
+        const skillsContainer = document.getElementById('skills-container');
+        data.skills.forEach(skill => {
+          skillsContainer.innerHTML += createCard(skill, 'skill');
+        });
+        
+        
+        setupSearchAndFilter();
+        
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    
+    // Creating crad broo
+    function createCard(item, type) {
+      const tagsHtml = item.tags.map(tag => 
+        `<span class="tag tag-${type}">${tag}</span>`
+      ).join('');
+      
+      const linksHtml = `
+        ${item.links.whatsapp ? `<a href="${item.links.whatsapp}" class="card-link" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>` : ''}
+        ${item.links.instagram ? `<a href="${item.links.instagram}" class="card-link" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>` : ''}
+        ${item.links.amazon ? `<a href="${item.links.amazon}" class="card-link" title="Amazon" target="_blank"><i class="fab fa-amazon"></i></a>` : ''}
+        ${item.links.youtube ? `<a href="${item.links.youtube}" class="card-link" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>` : ''}
+      `;
+   
+      return `
+  <div class="card"
+       data-tags="${item.tags.join(',').toLowerCase()}"
+       data-name="${item.name.toLowerCase()}"
+       data-type="${type}">
+    <div class="card-image-container">
+      <img src="${item.image}" alt="${item.name}" class="card-image">
+      <div class="card-image-overlay"></div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">${item.name}</h3>
+      <p class="card-description">${item.description}</p>
+      <div class="card-tags">${tagsHtml}</div>
+      <div id="flex">
+        <div class="card-links">${linksHtml}</div>
+        <div class="card-actions">
+          <a href="${item.page}" class="btn primary">
+            <i class="fas fa-arrow-right"></i> More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+
+
+    }
+    
+    // Searchinggg
+    function setupSearchAndFilter() {
+      const searchInput = document.getElementById('search-input');
+      const showAllBtn = document.getElementById('show-all');
+      const showStartupsBtn = document.getElementById('show-startups');
+      const showSkillsBtn = document.getElementById('show-skills');
+      
+      const startupsSection = document.getElementById('startups-section');
+      const skillsSection = document.getElementById('skills-section');
+      
+      const allCards = document.querySelectorAll('.card');
+      
+      // Searching ing
+      searchInput.addEventListener('input', filterCards);
+      
+      // Filterpani
+      showAllBtn.addEventListener('click', () => {
+        showAllBtn.classList.add('active');
+        showStartupsBtn.classList.remove('active');
+        showSkillsBtn.classList.remove('active');
+        
+        startupsSection.style.display = 'block';
+        skillsSection.style.display = 'block';
+        
+        filterCards();
+      });
+      
+      showStartupsBtn.addEventListener('click', () => {
+        showAllBtn.classList.remove('active');
+        showStartupsBtn.classList.add('active');
+        showSkillsBtn.classList.remove('active');
+        
+        startupsSection.style.display = 'block';
+        skillsSection.style.display = 'none';
+        
+        filterCards();
+      });
+      
+      showSkillsBtn.addEventListener('click', () => {
+        showAllBtn.classList.remove('active');
+        showStartupsBtn.classList.remove('active');
+        showSkillsBtn.classList.add('active');
+        
+        startupsSection.style.display = 'none';
+        skillsSection.style.display = 'block';
+        
+        filterCards();
+      });
+      
+      function filterCards() {
+        const searchTerm = searchInput.value.toLowerCase();
+        
+        allCards.forEach(card => {
+          const name = card.dataset.name;
+          const tags = card.dataset.tags;
+          const type = card.dataset.type;
+          
+          const showStartups = showAllBtn.classList.contains('active') || showStartupsBtn.classList.contains('active');
+          const showSkills = showAllBtn.classList.contains('active') || showSkillsBtn.classList.contains('active');
+          
+          const matchesType = (type === 'startup' && showStartups) || (type === 'skill' && showSkills);
+          const matchesSearch = name.includes(searchTerm) || tags.includes(searchTerm) || searchTerm === '';
+          
+          if (matchesType && matchesSearch) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+    }
+    
+    
+    document.addEventListener('DOMContentLoaded', fetchData);
+  </script>
 </body>
 </html>
